@@ -10,8 +10,8 @@ public class HelloWorld {
         String name = input.nextLine();
         input.close();
 
-        System.out.println("Hello, " + name);
+            System.out.println("Hello, " + name);
+
+        }
 
     }
-
-}

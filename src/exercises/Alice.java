@@ -22,29 +22,14 @@ public class Alice {
             System.out.println("Search term found!" +
                     " Search term found at index: " + firstLine.indexOf(searchTerm) + " and" +
                     " the length of the search term is: " + searchTerm.length());
-            String beginningOfLine = firstLine.substring(0, (firstLine.indexOf(searchTerm)));
+            String beginningOfLine = firstLine.substring(0, firstLine.indexOf(searchTerm));
 
-            String endOfLine = firstLine.substring(firstLine.indexOf(searchTerm) + searchTerm.length(), (firstLine.length() - 1))
+            String endOfLine = firstLine.substring(firstLine.indexOf(searchTerm) + (searchTerm.length() + 1), (firstLine.length() - 1))
 ;
 
             String firstLineMod = beginningOfLine + endOfLine;
             System.out.println(firstLineMod);
-
-
-//            String firstLineMod[] = firstLine.split(" ");
-//            String backTogether = firstLineMod[0].concat(" " + firstLineMod[1]).concat(" " + firstLineMod[3]).
-//                    concat(" " + firstLineMod[4]).concat(" " + firstLineMod[5]);
-//            System.out.println(backTogether);
-//            /*So, I could do it the above way, but that seems really clunky and inelegant.*/
-//            String smartMod = firstLine.replace(searchTerm,"");
-//            //With this way, I'm left with an empty spot which messes with the index.
-//
-//
-//            System.out.println(smartMod);
-
-//            String newArr[] = ArrayUtils.removeElement(firstLineMod, searchTerm);
-            //I don't have this library, but it seems very handy.
-
+            System.out.println(firstLineMod.length() + "," + firstLine.length());
 
         } else {
             System.out.println("Search term not found.");

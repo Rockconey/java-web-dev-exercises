@@ -1,12 +1,12 @@
 package org.launchcode.java.studios.areaofacircle;
 
 public class NumberCheck {
-    public static boolean notNumber(String strRadius, Double dblRadius) {
+    public static boolean isNumber(String strRadius) {
 
         if (strRadius != null) {
             try {
-                double d = Double.parseDouble(dblRadius);
-            } catch (NumberFormatException nfe) {
+                double num = Double.parseDouble(strRadius);
+            } catch (Exception ex/*NumberFormatException nfe*/) {
                 return false;
             }
             return true;

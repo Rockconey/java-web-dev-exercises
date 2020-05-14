@@ -46,20 +46,4 @@ public class QuizTest {
 
     }
 
-    @Test
-    public void correctAnswerIsCorrect() {
-        Quiz trial = new Quiz();
-        MultipleChoice dogLegs = new MultipleChoice("How many legs do dogs usually have?", 1, "4");
-        trial.addQuestion(dogLegs);
-        dogLegs.addAnswer("2");
-        dogLegs.addAnswer("4");
-        dogLegs.addAnswer("1");
-        dogLegs.addAnswer("2");
-        dogLegs.addAnswer("3");
-        trial.setStudentAnswers("4");
-        assertFalse(trial.getAnswerKey().equals(trial.getStudentAnswers()));
-//        assertEquals(1.0,trial.getScore(), .001);
-
-    }
-
 }
